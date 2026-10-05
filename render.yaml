@@ -1,0 +1,15 @@
+services:
+  - type: web
+    name: cinematch-api
+    runtime: python
+    rootDir: cinematch-3d/backend
+    buildCommand: pip install -r requirements.txt
+    startCommand: uvicorn main:app --host 0.0.0.0 --port $PORT
+    healthCheckPath: /openapi.json
+    envVars:
+      - key: DATABASE_URL
+        sync: false
+      - key: ADMIN_SIGNUP_KEY
+        sync: false
+      - key: SECRET_KEY
+        generateValue: true
