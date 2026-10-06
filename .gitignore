@@ -1,0 +1,9 @@
+.venv/
+.vscode/
+**/node_modules/
+**/dist/
+**/__pycache__/
+**/*.py[cod]
+cinematch-3d/backend/.env
+cinematch-3d/backend/media/files/
+cinematch-3d/vite.config.ts.timestamp-*.mjs
